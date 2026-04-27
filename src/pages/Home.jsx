@@ -9,6 +9,7 @@ export default function Home({a: a1}) {
         setCount(count + 1);
     }
     const r_count = useSelector((state) => state.counter.value);
+    const ls_r_count = useSelector((state) => state.ls_counter.value);
     const dispatch = useDispatch();
     return <>
         <h1 className={"my-h1"}>Home page {a1}</h1>
@@ -16,6 +17,6 @@ export default function Home({a: a1}) {
         <button onClick={changeCount}>{count}</button>
         <button onClick={()=>{
             dispatch(increment());
-        }}>{r_count}</button>
+        }}>{r_count}__{ls_r_count}</button>
     </>;
 }
